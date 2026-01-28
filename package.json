@@ -1,0 +1,36 @@
+{
+  "name": "ner-tamid-eternal-insights",
+  "version": "1.0.0",
+  "description": "Autonomous investment management platform with 20% automatic charity allocation",
+  "private": true,
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:client": "npm run dev --workspace=client",
+    "dev:server": "npm run dev --workspace=server",
+    "build": "npm run build --workspaces",
+    "test": "npm run test --workspaces",
+    "test:charity": "npm run test:charity --workspace=server",
+    "lint": "npm run lint --workspaces",
+    "db:setup": "npm run db:setup --workspace=server",
+    "db:migrate": "npm run db:migrate --workspace=server"
+  },
+  "keywords": [
+    "investment",
+    "charity",
+    "blockchain",
+    "ai",
+    "NerTamidEternal"
+  ],
+  "author": "Ner Tamid Eternal Insights",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

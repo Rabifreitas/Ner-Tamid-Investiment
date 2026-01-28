@@ -1,0 +1,84 @@
+.settings-page {
+    padding: 2rem;
+    color: white;
+}
+
+.settings-header {
+    margin-bottom: 3rem;
+}
+
+.settings-header h1 {
+    font-size: 2.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.header-icon {
+    color: #ffcc33;
+}
+
+.settings-header p {
+    color: #888;
+}
+
+.settings-container {
+    display: flex;
+    gap: 3rem;
+}
+
+.settings-nav {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.nav-item {
+    background: none;
+    border: none;
+    color: #888;
+    padding: 1rem;
+    border-radius: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    width: 100%;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.2s;
+}
+
+.nav-item:hover {
+    background: rgba(255, 255, 255, 0.03);
+    color: #ccc;
+}
+
+.nav-item.active {
+    background: rgba(255, 204, 51, 0.1);
+    color: #ffcc33;
+}
+
+.settings-content {
+    flex: 1;
+}
+
+.settings-section {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 1.5rem;
+    padding: 2rem;
+}
+
+@media (max-width: 900px) {
+    .settings-container {
+        flex-direction: column;
+    }
+
+    .settings-nav {
+        width: 100%;
+        flex-direction: row;
+        overflow-x: auto;
+    }
+}

@@ -1,0 +1,65 @@
+/**
+ * Menorah Logo Styles
+ * #NerTamidEternal
+ */
+
+.menorah-logo {
+    filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.4));
+}
+
+.menorah-logo.animated .flame {
+    animation: flicker 1.5s ease-in-out infinite;
+    transform-origin: center bottom;
+}
+
+.menorah-logo.animated .flame-center {
+    animation-delay: 0s;
+}
+
+.menorah-logo.animated .flame-1 {
+    animation-delay: 0.2s;
+}
+
+.menorah-logo.animated .flame-2 {
+    animation-delay: 0.4s;
+}
+
+.menorah-logo.animated .flame-3 {
+    animation-delay: 0.1s;
+}
+
+.menorah-logo.animated .flame-4 {
+    animation-delay: 0.3s;
+}
+
+.menorah-logo.animated .flame-5 {
+    animation-delay: 0.5s;
+}
+
+.menorah-logo.animated .flame-6 {
+    animation-delay: 0.15s;
+}
+
+@keyframes flicker {
+
+    0%,
+    100% {
+        transform: scaleY(1) scaleX(1);
+        opacity: 1;
+    }
+
+    25% {
+        transform: scaleY(1.1) scaleX(0.9);
+        opacity: 0.9;
+    }
+
+    50% {
+        transform: scaleY(0.95) scaleX(1.05);
+        opacity: 1;
+    }
+
+    75% {
+        transform: scaleY(1.05) scaleX(0.95);
+        opacity: 0.95;
+    }
+}

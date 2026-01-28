@@ -1,0 +1,95 @@
+.voting-widget {
+    background: rgba(255, 255, 255, 0.02);
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.voting-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #ffcc33;
+    margin-bottom: 0.5rem;
+}
+
+.voting-subtitle {
+    font-size: 0.8rem;
+    color: #888;
+    margin-bottom: 1.5rem;
+}
+
+.standings-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.standing-row {
+    cursor: pointer;
+    display: grid;
+    grid-template-areas:
+        "info action"
+        "bar bar";
+    gap: 0.5rem;
+}
+
+.standing-info {
+    grid-area: info;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.charity-name {
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.vote-pct {
+    font-size: 0.8rem;
+    color: #ffcc33;
+    font-weight: bold;
+}
+
+.progress-bar-bg {
+    grid-area: bar;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #ffcc33 0%, #ff8800 100%);
+    box-shadow: 0 0 10px rgba(255, 204, 51, 0.3);
+}
+
+.vote-action {
+    grid-area: action;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.voted-icon {
+    color: #10b981;
+}
+
+.unvoted-icon {
+    color: #444;
+}
+
+.standing-row:hover .unvoted-icon {
+    color: #666;
+}
+
+.voting-footer {
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+    color: #666;
+}

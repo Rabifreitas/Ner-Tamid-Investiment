@@ -1,0 +1,84 @@
+.social-auth-container {
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.social-divider {
+    position: relative;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.social-divider::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.social-divider span {
+    position: relative;
+    background: #0a0a0a;
+    /* Match background */
+    padding: 0 1rem;
+    color: #666;
+    font-size: 0.85rem;
+}
+
+.social-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.social-btn {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 0.8rem;
+    border-radius: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.google-btn:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: #4285F4;
+    color: #4285F4;
+}
+
+.apple-btn:hover {
+    background: white;
+    color: black;
+}
+
+.phone-auth-btn {
+    width: 100%;
+    background: none;
+    border: 1px solid rgba(255, 204, 51, 0.2);
+    color: #ffcc33;
+    padding: 0.9rem;
+    border-radius: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.phone-auth-btn:hover {
+    background: rgba(255, 204, 51, 0.05);
+    border-color: #ffcc33;
+}

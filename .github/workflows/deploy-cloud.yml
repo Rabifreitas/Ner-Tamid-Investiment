@@ -1,0 +1,50 @@
+name: Deploy to AWS
+
+on:
+  push:
+    branches: [ main ]
+
+env:
+  AWS_REGION: us-east-1
+  ECR_REPOSITORY_API: nertamid-api
+  ECR_REPOSITORY_APP: nertamid-app
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Login to Amazon ECR
+        id: login-ecr
+        uses: aws-actions/amazon-ecr-login@v2
+
+      # build and push server
+      - name: Build, tag, and push API image to Amazon ECR
+        env:
+          ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+        run: |-
+          docker build -t $ECR_REGISTRY/$ECR_REPOSITORY_API:latest ./server
+          docker push $ECR_REGISTRY/$ECR_REPOSITORY_API:latest
+
+      # build and push client
+      - name: Build, tag, and push App image to Amazon ECR
+        env:
+          ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+        run: |-
+          docker build -t $ECR_REGISTRY/$ECR_REPOSITORY_APP:latest ./client
+          docker push $ECR_REGISTRY/$ECR_REPOSITORY_APP:latest
+
+      # Note: For App Runner, the actual deployment trigger is often automatic 
+      # if "Continuous deployment" is enabled in the App Runner console service settings.
+      # If not, you can use AWS CLI to trigger it here:
+      # - name: Deploy to App Runner
+      #   run: aws apprunner start-deployment --service-arn ${{ secrets.APP_RUNNER_API_ARN }}

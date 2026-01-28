@@ -1,0 +1,201 @@
+.live-terminal {
+    padding: 2rem;
+    color: white;
+    min-height: calc(100vh - 80px);
+}
+
+.terminal-header {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.terminal-header h1 {
+    font-size: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, #fff 0%, #ffcc33 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.zap-icon {
+    color: #ffcc33;
+}
+
+.terminal-header p {
+    color: #888;
+    font-size: 1.1rem;
+}
+
+.terminal-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.visualizer-section {
+    position: relative;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(255, 204, 51, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.visualizer-overlay {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    pointer-events: none;
+}
+
+.status-badge {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.live-dot {
+    width: 8px;
+    height: 8px;
+    background: #ff3333;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #ff3333;
+    animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.3;
+    }
+}
+
+.data-sections {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.price-feed,
+.notifications-area {
+    background: rgba(20, 20, 20, 0.8);
+    backdrop-filter: blur(20px);
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.price-feed h3,
+.notifications-area h3 {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.25rem;
+    color: #ffcc33;
+}
+
+.price-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1rem;
+}
+
+.price-card {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 1rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+}
+
+.price-card:hover {
+    background: rgba(255, 255, 255, 0.06);
+    transform: translateY(-2px);
+}
+
+.price-card .symbol {
+    font-size: 0.9rem;
+    color: #888;
+    font-weight: bold;
+}
+
+.price-card .price {
+    font-size: 1.4rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.price-card .price.updated {
+    animation: priceHighlight 1s ease-out;
+}
+
+@keyframes priceHighlight {
+    0% {
+        color: #ffcc33;
+        text-shadow: 0 0 10px #ffcc33;
+    }
+
+    100% {
+        color: white;
+    }
+}
+
+.notification-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.notification-item {
+    background: rgba(255, 170, 0, 0.05);
+    border-left: 4px solid #ffaa00;
+    padding: 1rem;
+    border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.notification-item .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.notification-item .msg {
+    font-size: 0.95rem;
+}
+
+.notification-item .time {
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.empty-msg {
+    color: #444;
+    text-align: center;
+    padding: 2rem;
+    font-style: italic;
+}
+
+@media (max-width: 900px) {
+    .data-sections {
+        grid-template-columns: 1fr;
+    }
+}

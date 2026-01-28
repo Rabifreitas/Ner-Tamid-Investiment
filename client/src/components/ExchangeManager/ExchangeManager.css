@@ -1,0 +1,218 @@
+.exchange-manager {
+    padding: 1rem;
+}
+
+.manager-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.manager-header h2 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0;
+    color: #ffcc33;
+}
+
+.shield-icon {
+    color: #ffcc33;
+}
+
+.manager-header p {
+    margin: 0.2rem 0 0;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+.add-btn {
+    background: rgba(255, 204, 51, 0.1);
+    border: 1px solid rgba(255, 204, 51, 0.3);
+    color: #ffcc33;
+    padding: 0.6rem 1.2rem;
+    border-radius: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-weight: 500;
+}
+
+.add-btn:hover {
+    background: rgba(255, 204, 51, 0.2);
+}
+
+.add-btn.active {
+    background: #ff4444;
+    color: white;
+    border-color: #ff4444;
+}
+
+.connection-form-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 1.2rem;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.input-group label {
+    display: block;
+    font-size: 0.8rem;
+    color: #888;
+    margin-bottom: 0.5rem;
+}
+
+.input-group select,
+.input-group input {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 0.8rem;
+    border-radius: 0.6rem;
+    outline: none;
+}
+
+.submit-btn {
+    width: 100%;
+    background: #ffcc33;
+    color: #000;
+    border: none;
+    padding: 1rem;
+    border-radius: 0.8rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.security-note {
+    text-align: center;
+    font-size: 0.75rem;
+    color: #666;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+}
+
+.connection-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.exchange-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 1.2rem;
+    padding: 1.2rem;
+    transition: transform 0.2s;
+}
+
+.exchange-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+}
+
+.exchange-badge {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.3rem 0.6rem;
+    border-radius: 0.4rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.status-pill {
+    margin-left: 0.5rem;
+    font-size: 0.75rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 1rem;
+}
+
+.status-pill.active {
+    color: #00ff88;
+    background: rgba(0, 255, 136, 0.1);
+}
+
+.status-pill.inactive {
+    color: #ff4444;
+    background: rgba(255, 68, 68, 0.1);
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+    color: #444;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    color: #ff4444;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 1rem;
+}
+
+.last-used {
+    color: #666;
+    font-size: 0.8rem;
+}
+
+.balance-btn {
+    background: none;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #ccc;
+    padding: 0.4rem 0.8rem;
+    border-radius: 0.5rem;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+.balance-btn:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+}
+
+.spin {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,232 @@
+.discovery-page {
+    padding: 2rem;
+    color: white;
+}
+
+.discovery-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+}
+
+.header-icon {
+    color: #ffcc33;
+}
+
+.header-text h1 {
+    font-size: 2.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, #fff 0%, #ffcc33 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.header-text p {
+    color: #888;
+    font-size: 1.1rem;
+}
+
+.scan-btn {
+    background: #ffcc33;
+    color: #000;
+    border: none;
+    padding: 1rem 1.5rem;
+    border-radius: 1rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.scan-btn:hover {
+    background: #ffd659;
+    transform: scale(1.02);
+}
+
+.scan-btn.scanning {
+    background: #333;
+    color: #888;
+    cursor: wait;
+}
+
+.status-banner {
+    background: rgba(0, 255, 136, 0.05);
+    border: 1px solid rgba(0, 255, 136, 0.1);
+    color: #00ff88;
+    padding: 1rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 0.9rem;
+    margin-bottom: 3rem;
+}
+
+.discovery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    gap: 2rem;
+}
+
+.pearl-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 2rem;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+
+.pearl-card:hover {
+    border-color: rgba(255, 204, 51, 0.3);
+    background: rgba(255, 204, 51, 0.02);
+    transform: translateY(-5px);
+}
+
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.symbol-badge {
+    background: #222;
+    padding: 0.4rem 0.8rem;
+    border-radius: 0.6rem;
+    font-weight: bold;
+    font-family: 'Inter', monospace;
+    font-size: 1.1rem;
+    color: #ffcc33;
+}
+
+.asset-name {
+    margin: 0.5rem 0 0;
+    font-size: 1.4rem;
+}
+
+.score-badge {
+    border: 1px solid;
+    padding: 0.5rem 0.8rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: bold;
+    font-size: 0.85rem;
+}
+
+.card-metrics {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+}
+
+.metric .label {
+    display: block;
+    font-size: 0.8rem;
+    color: #888;
+    margin-bottom: 0.3rem;
+}
+
+.metric .value {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.card-analysis h4 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #ffcc33;
+    margin-bottom: 0.8rem;
+}
+
+.card-analysis p {
+    color: #ccc;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+}
+
+.card-signals {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.signal-tag {
+    background: rgba(0, 255, 136, 0.1);
+    color: #00ff88;
+    padding: 0.3rem 0.7rem;
+    border-radius: 2rem;
+    font-size: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.trade-btn {
+    background: none;
+    border: 1px solid rgba(255, 204, 51, 0.3);
+    color: #ffcc33;
+    padding: 0.6rem 1.2rem;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.trade-btn:hover {
+    background: rgba(255, 204, 51, 0.1);
+}
+
+.risk-level {
+    color: #666;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.loading-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    gap: 1.5rem;
+    color: #888;
+}
+
+.spin {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
